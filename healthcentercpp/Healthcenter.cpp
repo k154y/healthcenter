@@ -44,7 +44,7 @@ int main() {
 
     while (running) {
 
-        cout << "\n===== COMMUNITY HEALTH CENTER SYSTEM =====\n";
+        cout << "\nCOMMUNITY HEALTH CENTER SYSTEM \n";
         cout << "1. Add regular patient\n";
         cout << "2. Add emergency patient\n";
         cout << "3. Serve next patient\n";
@@ -101,7 +101,7 @@ int main() {
 
                 int waiting = current_total - p.arrival_total;
 
-                cout << "\n*** EMERGENCY PATIENT SERVED ***\n";
+                cout << "\nEMERGENCY PATIENT SERVED \n";
                 cout << "Name: " << p.name << endl;
                 cout << "Case: " << p.ecase << endl;
                 cout << "Priority: " << p.priority << endl;
@@ -116,7 +116,7 @@ int main() {
 
                 int waiting = current_total - p.arrival_total;
 
-                cout << "\n*** REGULAR PATIENT SERVED ***\n";
+                cout << "\nREGULAR PATIENT SERVED \n";
                 cout << "Name: " << p.name << endl;
                 cout << "Arrival: " << convertTime(p.arrival_total) << endl;
                 cout << "Waiting Time: " << waiting << " minutes\n";
@@ -131,7 +131,7 @@ int main() {
 
         case 4: {
 
-            cout << "\n===== QUEUE STATUS =====\n";
+            cout << "\nQUEUE STATUS \n";
             cout << "Emergency patients waiting: " << emergency.size() << endl;
             cout << "Regular patients waiting: " << consultation.size() << endl;
             break;
@@ -139,12 +139,12 @@ int main() {
 
         case 5: {
 
-            cout << "\n===== FULL WAITING LIST =====\n";
+            cout << "\nFULL WAITING LIST \n";
 
             priority_queue<patient> tempEmergency = emergency;
             queue<patient> tempRegular = consultation;
 
-            cout << "\n--- Emergency Patients ---\n";
+            cout << "\nEmergency Patients \n";
 
             while (!tempEmergency.empty()) {
                 patient p = tempEmergency.top();
@@ -157,7 +157,7 @@ int main() {
                      << endl;
             }
 
-            cout << "\n--- Regular Patients ---\n";
+            cout << "\nRegular Patients \n";
 
             while (!tempRegular.empty()) {
                 patient p = tempRegular.front();
